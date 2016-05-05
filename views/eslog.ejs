@@ -177,12 +177,15 @@
 			var drzava = podatkiOStranki[0].Country;
 			var telefon = podatkiOStranki[0].Phone;
 			var kontaktnaOseba = naziv + " (" + podatkiOStranki[0].Email + ")";
+			var company = podatkiOStranki[0].Company;
+			var fax = podatkiOStranki[0].Fax;
 		%>
 		<PodatkiPodjetja>
 			<NazivNaslovPodjetja>
 				<VrstaPartnerja>BY</VrstaPartnerja>
 				<NazivPartnerja>
 					<NazivPartnerja1><%= naziv %></NazivPartnerja1>
+					<NazivPartnerja2><%= company %></NazivPartnerja2>
 				</NazivPartnerja>
 				<Ulica>
 					<Ulica1><%= naslov %></Ulica1>
@@ -221,7 +224,7 @@
 					<VrstaKomunikacije>TE</VrstaKomunikacije>
 				</Komunikacije>
 				<Komunikacije>
-					<StevilkaKomunikacije></StevilkaKomunikacije>
+					<StevilkaKomunikacije><%= fax %></StevilkaKomunikacije>
 					<VrstaKomunikacije>FX</VrstaKomunikacije>
 				</Komunikacije>
 			</KontaktiPodjetja>
