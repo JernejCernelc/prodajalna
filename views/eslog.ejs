@@ -171,14 +171,15 @@
 		<!-- naročnik -->
 		<%
 			var naziv = podatkiOStranki[0].FirstName + " " + podatkiOStranki[0].LastName;
-			var company = podatkiOStranki[0].Company;
 			var naslov = podatkiOStranki[0].Address;
 			var kraj = podatkiOStranki[0].City;
 			var postnaStevilka = podatkiOStranki[0].PostalCode;
 			var drzava = podatkiOStranki[0].Country;
 			var telefon = podatkiOStranki[0].Phone;
 			var kontaktnaOseba = naziv + " (" + podatkiOStranki[0].Email + ")";
+			var company = podatkiOStranki[0].Company;
 			var fax = podatkiOStranki[0].Fax;
+			
 		%>
 		<PodatkiPodjetja>
 			<NazivNaslovPodjetja>
@@ -223,7 +224,7 @@
 					<VrstaKomunikacije>TE</VrstaKomunikacije>
 				</Komunikacije>
 				<Komunikacije>
-					<StevilkaKomunikacije> fax </StevilkaKomunikacije>
+					<StevilkaKomunikacije><%= fax %></StevilkaKomunikacije>
 					<VrstaKomunikacije>FX</VrstaKomunikacije>
 				</Komunikacije>
 			</KontaktiPodjetja>
