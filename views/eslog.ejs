@@ -169,7 +169,7 @@
 			</KontaktiPodjetja>
 		</PodatkiPodjetja>
 		<!-- naročnik -->
-		<%
+			<%
 			var naziv = podatkiOStranki[0].FirstName + " " + podatkiOStranki[0].LastName;
 			var naslov = podatkiOStranki[0].Address;
 			var kraj = podatkiOStranki[0].City;
@@ -177,12 +177,16 @@
 			var drzava = podatkiOStranki[0].Country;
 			var telefon = podatkiOStranki[0].Phone;
 			var kontaktnaOseba = naziv + " (" + podatkiOStranki[0].Email + ")";
+			var company = podatkiOStranki[0].Company;
+			var fax = podatkiOStranki[0].Fax;
+			
 		%>
 		<PodatkiPodjetja>
 			<NazivNaslovPodjetja>
 				<VrstaPartnerja>BY</VrstaPartnerja>
 				<NazivPartnerja>
 					<NazivPartnerja1><%= naziv %></NazivPartnerja1>
+					<NazivPartnerja2><%= company %></NazivPartnerja2>
 				</NazivPartnerja>
 				<Ulica>
 					<Ulica1><%= naslov %></Ulica1>
@@ -190,7 +194,6 @@
 				<Kraj><%= kraj %></Kraj>
 				<NazivDrzave><%= drzava %></NazivDrzave>
 				<PostnaStevilka><%= postnaStevilka %></PostnaStevilka>
-				<KodaDrzave></KodaDrzave>
 			</NazivNaslovPodjetja>
 			<FinancniPodatkiPodjetja>
 				<BancniRacun>
@@ -221,7 +224,7 @@
 					<VrstaKomunikacije>TE</VrstaKomunikacije>
 				</Komunikacije>
 				<Komunikacije>
-					<StevilkaKomunikacije></StevilkaKomunikacije>
+					<StevilkaKomunikacije><%= fax %></StevilkaKomunikacije>
 					<VrstaKomunikacije>FX</VrstaKomunikacije>
 				</Komunikacije>
 			</KontaktiPodjetja>
